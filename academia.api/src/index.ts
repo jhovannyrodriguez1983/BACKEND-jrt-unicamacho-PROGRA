@@ -1,6 +1,8 @@
 import express from 'express';
+import instructorRoutes from './routes/instructor.routes';
 
 const app = express();
+app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
 
@@ -41,6 +43,9 @@ app.get('/courses/:id', (req, res) => {
 
   res.status(200).json(course);
 });
+
+// NUEVA RUTA PARA INSTRUCTORES
+app.use('/instructors', instructorRoutes);
 
 app.get('/version', (req, res) => {
   res.status(200).json({ version: '1.0.0' });

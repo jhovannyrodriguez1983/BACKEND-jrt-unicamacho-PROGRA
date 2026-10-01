@@ -1,0 +1,50 @@
+{
+	"info": {
+		"name": "AcademiaAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Obtener todos los instructores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/instructors",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "3000",
+					"path": ["instructors"]
+				}
+			}
+		},
+		{
+			"name": "Obtener instructor por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/instructors/1",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "3000",
+					"path": ["instructors", "1"]
+				}
+			}
+		},
+		{
+			"name": "Probar error 404 instructor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/instructors/999",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "3000",
+					"path": ["instructors", "999"]
+				}
+			}
+		}
+	]
+}
